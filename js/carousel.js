@@ -1,39 +1,36 @@
-export function initializeCarousel() {
-    const carousel = document.querySelector('.carousel');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
-    const card = carousel.querySelector('.project-card');
-    
-    if (!carousel || !prevButton || !nextButton || !card) {
-        console.error('Carousel elements not found');
-        return;
-    }
+export function initializeCarousels() {
+    const carousels = document.querySelectorAll('.carousel-container');
+    carousels.forEach((carouselContainer, index) => {
+        const carousel = carouselContainer.querySelector('.carousel');
+        const projectCards = carousel.querySelectorAll('.project-card');
+        const prevButton = carouselContainer.querySelector('.prev');
+        const nextButton = carouselContainer.querySelector('.next');
 
-    // Calculate the width of two cards (card width + margin)
-    const cardWidth = card.offsetWidth + parseFloat(getComputedStyle(card).marginRight);
-    const scrollDistance = cardWidth; // Move by the width of two cards
+        if (projectCards.length === 0) {
+            console.warn('No project cards found in this carousel. Skipping initialization.');
+            return;
+        }
 
-    function updateArrows() {
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+        let scrollAmount = -20;
+        const cardWidth = projectCards[0].offsetWidth + 20; // 20px for left margin
 
-        // Disable prev button if at the start
-        prevButton.disabled = carousel.scrollLeft <= 0;
+        nextButton.addEventListener('click', () => {
+            scrollAmount += cardWidth;
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            carousel.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
 
-        // Disable next button if at the end
-        nextButton.disabled = carousel.scrollLeft >= maxScrollLeft;
-    }
-
-    prevButton.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+        prevButton.addEventListener('click', () => {
+            scrollAmount -= cardWidth;
+            if (scrollAmount < 0) scrollAmount = 0;
+            carousel.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
     });
-
-    nextButton.addEventListener('click', () => {
-        carousel.scrollBy({ left: scrollDistance, behavior: 'smooth' });
-    });
-
-    // Listen for scroll events to update arrow states dynamically
-    carousel.addEventListener('scroll', updateArrows);
-
-    // Update the arrows initially
-    updateArrows();
 }

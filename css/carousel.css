@@ -1,4 +1,8 @@
 
+.spacer{
+    flex: 0 0 .02%; /* Adjust this value to match your spacer width */
+    height: 1px
+}
 .project-card {
     position: relative;
     flex: 0 0 auto;
@@ -11,7 +15,9 @@
     padding: 1.5rem;
     color: white;
     transition: all 0.3s ease;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+    scroll-padding-left: 20px;
+    margin-left: 0; /* Remove negative margin */
     cursor: pointer;
     overflow: hidden;
 }
@@ -36,16 +42,16 @@
     display: none;
 }
 
-/* ... (rest of the styles) ... */
 .carousel-container {
     position: relative;
     max-width: 1000px;
     width: 100%;
+    padding: 0 50px
     z-index: 1;
 }
 
 .carousel {
-    display: flex;
+    
     transition: all 0.3s ease;
 }
 
@@ -60,7 +66,7 @@
     border-radius: 0.5rem;
     color: white;
     transition: all 0.3s ease;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     cursor: pointer;
     overflow: hidden;
 }
@@ -90,19 +96,24 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .carousel-button {
-    background-color: #333; /* Dark background for contrast */
+    position: absolute;
+    top: 50%;
+    transform: translateY(250%);
+    background-color: #333;
     color: white;
     border: none;
-    font-size: 24px; /* Larger arrow */
-    padding: 10px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
-    z-index: 1; /* Make sure it stays on top */
-    opacity: 0.8; /* Slight transparency */
+    z-index: 2;
+    opacity: 0.8;
     transition: opacity 0.3s;
 }
+
 
 .carousel-button:hover {
     opacity: 1; /* Full opacity on hover */
@@ -122,32 +133,58 @@
 }
 
 .carousel-outline {
-    overflow: hidden; /* This will crop the overflowing cards */
-    width: 100%; /* Ensure it uses the available width */
-    max-width: 1000px; /* Matches the container width */
-    margin: 0 auto; /* Center the carousel */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
 }
 
 .carousel {
     display: flex;
     transition: all 0.3s ease;
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-    scroll-snap-type: x mandatory; /* Enables snap scrolling for horizontal carousel */
-    overflow-x: scroll; /* Allows horizontal scrolling */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    height: auto;
+    padding: 10px 0 10px 10px; /* Add left padding */
+    margin-left: -10px; /* Negative margin to align with container */
 }
 
 .project-card {
-    scroll-snap-align: start; /* Cards will snap to the start when scrolling */
-    flex: 0 0 auto; /* Keeps the cards from shrinking */
-    width: calc(33.33% - 1rem); /* Maintain the width of each card */
+    /* scroll-snap-align: start; */
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
     min-width: 250px;
-    margin-right: 1rem; /* Space between cards */
+    height: 200px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    transform-origin: center center;
+}
+.project-card:hover {
+    transform: scale(1.05); /* Use scale instead of translateY */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.carousel::after {
+    content: '';
+    flex: 0 0 10px; /* Creates an empty space at the end */
+}
+.card-content {
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
 }
 
 /* Hide the default scrollbar */
 .carousel {
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Customize colors for Firefox */
+    margin-bottom: -80px; /* Prevents layout shift */
 }
 
 .carousel::-webkit-scrollbar {
@@ -166,4 +203,10 @@
 
 .carousel::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 255, 255, 0.5); /* Brighten the scrollbar on hover */
+}
+
+.carousel-wrapper {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    gap: 10px;
 }
