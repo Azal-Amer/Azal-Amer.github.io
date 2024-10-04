@@ -1,0 +1,519 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #87CEEB, #4682B4);
+    color: white;
+}
+
+/* Header Styles */
+.site-header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.carousel-outline {
+    border: 2px solid black;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
+    min-width: 250px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.project-card:last-child {
+    margin-right: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+    left: -3rem;
+}
+
+.carousel-button.next {
+    right: -3rem;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-button {
+        display: none;
+    }
+    
+    .carousel {
+        overflow-x: auto;
+    }
+
+    .project-card {
+        width: calc(100% - 1rem);
+    }
+}
+/* ... (previous styles remain the same) ... */
+
+.project-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
+    min-width: 250px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+
+.expand-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.expanded-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.expanded-content.active {
+    display: flex;
+}
+
+.long-description {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* ... (responsive styles remain the same) ... */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    z-index: 1;
+}
+
+.carousel {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.project-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
+    min-width: 250px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    transition: all 0.5s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.expand-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.expand-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.expanded-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.project-card.expanded {
+    width: 80vw;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.project-card.expanded .card-content {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-card.expanded .expanded-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.long-description {
+    flex: 1;
+    padding-right: 1rem;
+    overflow-y: auto;
+}
+
+.project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+.project-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
+    min-width: 250px;
+    height: 200px; /* Set a fixed height for consistency */
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.expanded-content {
+    position: fixed; /* Change to fixed positioning */
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling for overflow content */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: all 0.3s ease;
+}
+
+.project-card.expanded .expanded-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.long-description {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-bottom: 1rem; /* Add space between description and image */
+}
+
+.project-image {
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Add an overlay to dim the background when a card is expanded */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+/* ... (previous styles remain the same) ... */
+
+.project-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: calc(33.33% - 1rem);
+    min-width: 250px;
+    height: 200px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.expanded-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1001; /* Ensure it's above the overlay */
+}
+
+.project-card.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    z-index: 1002; /* Above expanded-content */
+    transition: all 0.3s ease;
+}
+
+.project-card.expanded .card-content {
+    opacity: 0;
+}
+
+.project-card.expanded .expanded-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.long-description {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000; /* Below expanded-content */
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ... (responsive styles remain the same) ... */

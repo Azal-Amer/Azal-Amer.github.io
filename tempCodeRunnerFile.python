@@ -1,3 +1,0 @@
-import pi3d 
-DISPLAY = pi3d.Display.create()
-CAM  = pi3d.camera()

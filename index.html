@@ -1,121 +1,81 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Clean.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azal's Personal Website</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="#">Azal Amer</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Tutoring.html">Tutoring</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="hire-me.html">Hire me</a></li>
-                </ul>
-            </div>
-            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-                <div class="container"><a class="navbar-brand logo" href="index.html">Azal Amer</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarNav-2">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="Tutoring.html">Tutoring</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                            <li class="nav-item"><a class="nav-link" href="hire-me.html">Hire me</a></li>
-                        </ul>
+    <header class="site-header">
+        <h1>Hi, I'm Azal</h1>
+        <p>I'm a Physics-CS Double Major at the University of Texas at Austin</p>
+    </header>
+    
+    <main class="main-content">
+        <div class="carousel-container">
+            <button class="carousel-button prev">&lt;</button>
+            <div class="carousel-outline">
+                <div class="carousel">
+                    <div class="project-card">
+                        <button class="expand-button">+</button>
+                        <h3>Project 1</h3>
+                        <p class="short-description">Brief description of the first project</p>
+                        <div class="expanded-content">
+                            <p class="long-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus mollis, tempus tellus et, feugiat mauris. Cras tortor eros, eleifend non nibh vel, porta hendrerit ligula. Ut lorem nisl, mollis ut diam eu, ornare vehicula nunc. Aliquam tempus faucibus nunc, quis rutrum magna congue nec. Nullam fringilla fringilla sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget tortor mi. Nunc eu laoreet justo. Curabitur et justo feugiat, fringilla mauris sed, luctus ligula. Maecenas ut varius nibh. Maecenas ac magna vitae lacus mollis mollis nec ut urna. Donec congue metus nec pellentesque congue. 
+                            </p>
+                            <img src="/api/placeholder/400/300" alt="Project 1 Image">
+                        </div>
                     </div>
+                    
+                    <div class="project-card">
+                        <button class="expand-button">+</button>
+                        <h3>Project 2</h3>
+                        <p class="short-description">Brief description of the second project</p>
+                        <div class="expanded-content">
+                            <p class="long-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus mollis, tempus tellus et, feugiat mauris. Cras tortor eros, eleifend non nibh vel, porta hendrerit ligula. Ut lorem nisl, mollis ut diam eu, ornare vehicula nunc. Aliquam tempus faucibus nunc, quis rutrum magna congue nec. Nullam fringilla fringilla sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget tortor mi. Nunc eu laoreet justo. Curabitur et justo feugiat, fringilla mauris sed, luctus ligula. Maecenas ut varius nibh. Maecenas ac magna vitae lacus mollis mollis nec ut urna. Donec congue metus nec pellentesque congue. 
+                            </p>
+                            <img src="/api/placeholder/400/300" alt="Project 2 Image">
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <button class="expand-button">+</button>
+                        <h3>Project 3</h3>
+                        <p class="short-description">Brief description of the third project</p>
+                        <div class="expanded-content">
+                            <p class="long-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus mollis, tempus tellus et, feugiat mauris. Cras tortor eros, eleifend non nibh vel, porta hendrerit ligula. Ut lorem nisl, mollis ut diam eu, ornare vehicula nunc. Aliquam tempus faucibus nunc, quis rutrum magna congue nec. Nullam fringilla fringilla sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget tortor mi. Nunc eu laoreet justo. Curabitur et justo feugiat, fringilla mauris sed, luctus ligula. Maecenas ut varius nibh. Maecenas ac magna vitae lacus mollis mollis nec ut urna. Donec congue metus nec pellentesque congue. 
+                            </p>
+                            <img src="/api/placeholder/400/300" alt="Project 3 Image">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <button class="expand-button">+</button>
+                        <h3>Project 4</h3>
+                        <p class="short-description">Brief description of the fourth project</p>
+                        <div class="expanded-content">
+                            <p class="long-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus mollis, tempus tellus et, feugiat mauris. Cras tortor eros, eleifend non nibh vel, porta hendrerit ligula. Ut lorem nisl, mollis ut diam eu, ornare vehicula nunc. Aliquam tempus faucibus nunc, quis rutrum magna congue nec. Nullam fringilla fringilla sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget tortor mi. Nunc eu laoreet justo. Curabitur et justo feugiat, fringilla mauris sed, luctus ligula. Maecenas ut varius nibh. Maecenas ac magna vitae lacus mollis mollis nec ut urna. Donec congue metus nec pellentesque congue. 
+                            </p>
+                            <img src="/api/placeholder/400/300" alt="Project 3 Image">
+                        </div>
+                    </div>
+                    
+                    <!-- Add more project cards as needed -->
                 </div>
-            </nav>
+            </div>
+            <button class="carousel-button next">&gt;</button>
         </div>
-    </nav>
-    <main class="page lanidng-page">
-        <section class="portfolio-block block-intro">
-            <div class="container"><div class="avatar" style="background-image:url('assets/img/avatars/avatar.jpg');"></div>
-                <div class="about-me">
-                    <p>Hello! I am <strong>Azal Amer</strong>. I work as a Science and STEM Tutor and Intern. I have passion for detailed and analytical work, with a hands on teaching style.</p><a class="btn btn-outline-primary" role="button" href="hire-me.html">Hire me</a>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block photography">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-6 col-lg-4 col-xl-4 item zoom-on-hover"><a href="https://cogive.vercel.app/"><img class="img-fluid image" src="assets/img/tech/Cogive.jpg" /></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="https://honeyhub.generationxcode.repl.co/#"><img class="img-fluid image" src="assets/img/tech/Honeyhub.jpg"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="Deep Unlearning Slides.pdf" download=""><img class="img-fluid image" src="assets/img/tech/Deep%20Unlearning.jpg"></a></div>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block call-to-action border-bottom">
-            <div class="container">
-                <div class="d-flex justify-content-center align-items-center content">
-                    <h3>Like what you see?</h3><a class="btn btn-outline-primary" role="button" href="hire-me.html">Hire me</a>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block skills">
-            <div class="container">
-                <div class="heading">
-                    <h2>Special Skills</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Web Design</h3>
-                                <p class="card-text">With years of web design work on my shoulders, I have developed an efficient workflow allowing me to make clean websites, with top to bottom work. I've mastered a variety of tools and libraries so that I can use the best tools to make the best website for a given area.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-lightbulb-outline"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">STEM Intern</h3>
-                                <p class="card-text">Advanced STEM programs at my school have provided me with helpful experience in a lab setting. My diverse programing background, combined with personal projects, has given me nuanced and elaborate Data Analysis skills. I work very well in a team setting, and can provide innovative solutions to complex problems.&nbsp;&nbsp;</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Student Tutor</h3>
-                                <p class="card-text">As a current High School Junior, I have the ability to tutor students on a variety of different subjects in a comprehensive and nuanced manner. My fields of expertise include STEM. I use a project based teaching style to encourage my students to use their creativity to push their work forward.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="links"><a href="cv.html">About me</a><a href="hire-me.html">Contact me</a><a href="projects-grid-cards.html">Projects</a><a href="https://github.com/Azal-Amer/Azal-Amer.github.io">Site Source Code</a></div>
-            <div class="social-icons"><a href="https://www.linkedin.com/in/azal-amer-1b2853205/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.instagram.com/amer_azal/"><i class="icon ion-social-instagram-outline"></i></a><a href="https://github.com/Azal-Amer"><i class="icon ion-social-github"></i></a></div>
-        </div>
-    </footer><!-- Clarity tracking code for http://azalamer.tech/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "71yug5uyxz");</script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-</body>
+    
+    <footer class="site-footer">
+        <p>&copy; 2024 Azal. All rights reserved.</p>
+    </footer>
 
+    <script type="module" src="js/main.js"></script>
+</body>
 </html>

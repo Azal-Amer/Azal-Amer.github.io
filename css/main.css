@@ -1,0 +1,18 @@
+/* Main CSS file - imports and general styles */
+@import url('layout.css');
+@import url('header.css');
+@import url('carousel.css');
+@import url('expandedCard.css');
+@import url('footer.css');
+@import url('responsive.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #87CEEB, #4682B4);
+    color: white;
+}
